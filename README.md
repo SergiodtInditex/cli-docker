@@ -53,3 +53,14 @@ Dirígete a la [página oficial de Docker](https://docs.docker.com/get-docker/) 
 ```bash
 docker --version
 ```
+
+## Construcción del Contenedor
+
+### Creación de la Imagen
+
+En el directorio que contiene el Dockerfile, construye la imagen de Docker que servirá como la base para tu contenedor:
+
+```bash
+docker build -t cli-image .
+```
+Este paso compila los recursos necesarios y prepara un entorno que imita un sistema operativo con todo lo necesario para ejecutar tu aplicación.
