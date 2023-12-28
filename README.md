@@ -39,3 +39,10 @@ Este repositorio contiene el Dockerfile y el script `entrypoint.sh`, que son fun
 ```bash
 git clone https://github.com/SergioInditex/cli-docker.git /directorio/para/docker
 ```
+### Preparación del Script de Entrada (Entrypoint)
+
+El archivo `entrypoint.sh` es crucial ya que define las acciones que se ejecutan cuando se inicia tu contenedor. Debes mover este archivo al directorio raíz de `DataStreaming` para asegurar que se encuentre en el lugar adecuado cuando el contenedor se ejecute:
+
+```bash
+cp /directorio/para/docker/entrypoint.sh /ruta/al/directorio/DataStreaming/
+```
