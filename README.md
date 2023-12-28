@@ -12,3 +12,11 @@ Este repositorio contiene el código fuente de la aplicación. Usa el siguiente 
 ```shell
 git clone https://InditexData@dev.azure.com/InditexData/DataStreaming/_git/DataStreaming
 cd DataStreaming
+
+#### iac-datastreamstatejson:
+Este repositorio incluye archivos de configuración clave para la aplicación. Clonarlo te permitirá modificar y aplicar configuraciones de forma local:
+
+```bash
+git clone https://github.com/inditex/iac-datastreamstatejson.git
+cd iac-datastreamstatejson
+
