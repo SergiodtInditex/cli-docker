@@ -29,3 +29,13 @@ Las variables de entorno `KAFKA_DATA_REPO` y `KAFKA_DATA_CONFIG` funcionan como 
 export KAFKA_DATA_REPO=$(pwd) # Debes ejecutarlo dentro del directorio DataStreaming
 export KAFKA_DATA_CONFIG=$(pwd) # Debes ejecutarlo dentro del directorio iac-datastreamstatejson
 ```
+## Integración con Docker
+
+### Obtención del Dockerfile y Scripts Relacionados
+
+#### Repositorio Docker:
+Este repositorio contiene el Dockerfile y el script `entrypoint.sh`, que son fundamentales para la configuración del contenedor. Clónalos en un directorio específico para mantener organizados tus archivos relacionados con Docker:
+
+```bash
+git clone https://github.com/SergioInditex/cli-docker.git /directorio/para/docker
+```
