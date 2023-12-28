@@ -64,3 +64,17 @@ En el directorio que contiene el Dockerfile, construye la imagen de Docker que s
 docker build -t cli-image .
 ```
 Este paso compila los recursos necesarios y prepara un entorno que imita un sistema operativo con todo lo necesario para ejecutar tu aplicación.
+
+## Manejo del Contenedor
+
+### Iniciar el Contenedor
+
+Al ejecutar el siguiente comando, le indicas a Docker que monte los directorios especificados como volúmenes dentro del contenedor. Esto permite que la aplicación acceda a ellos como si fueran parte de su sistema de archivos interno:
+
+```bash
+docker run -v ${KAFKA_DATA_REPO}:/app/DataStreaming \
+           -v ${KAFKA_DATA_CONFIG}:/app/iac-datastreamstatejson \
+           --name contenedor-cli \
+           -it cli-image /bin/bash
+```
+Al abrir una sesión de bash dentro del contenedor (-it cli-image /bin/bash), proporcionas un entorno interactivo para trabajar con la aplicación.
