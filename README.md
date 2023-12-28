@@ -44,5 +44,5 @@ git clone https://github.com/SergioInditex/cli-docker.git /directorio/para/docke
 El archivo `entrypoint.sh` es crucial ya que define las acciones que se ejecutan cuando se inicia tu contenedor. Debes mover este archivo al directorio raíz de `DataStreaming` para asegurar que se encuentre en el lugar adecuado cuando el contenedor se ejecute:
 
 ```bash
-cp /directorio/para/docker/entrypoint.sh /ruta/al/directorio/DataStreaming/
+cp /directorio/para/docker/entrypoint.sh /ruta/al/directorio/DataStreaming/ o ruta $KAFKA_DATA_REPO
 ```
