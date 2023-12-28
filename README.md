@@ -46,3 +46,10 @@ El archivo `entrypoint.sh` es crucial ya que define las acciones que se ejecutan
 ```bash
 cp /directorio/para/docker/entrypoint.sh /ruta/al/directorio/DataStreaming/ o ruta $KAFKA_DATA_REPO
 ```
+## Instalación de Docker
+
+Dirígete a la [página oficial de Docker](https://docs.docker.com/get-docker/) y sigue las instrucciones para instalar Docker Desktop o Docker Engine. Una vez instalado, asegúrate de que Docker está funcionando correctamente ejecutando:
+
+```bash
+docker --version
+```
