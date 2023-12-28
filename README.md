@@ -21,3 +21,11 @@ Este repositorio incluye archivos de configuración clave para la aplicación. C
 git clone https://github.com/inditex/iac-datastreamstatejson.git
 cd iac-datastreamstatejson
 ```
+### Establecimiento de Variables de Entorno
+
+Las variables de entorno `KAFKA_DATA_REPO` y `KAFKA_DATA_CONFIG` funcionan como enlaces entre tu sistema y el contenedor, facilitando el acceso a los archivos locales que son necesarios:
+
+```bash
+export KAFKA_DATA_REPO=$(pwd) # Debes ejecutarlo dentro del directorio DataStreaming
+export KAFKA_DATA_CONFIG=$(pwd) # Debes ejecutarlo dentro del directorio iac-datastreamstatejson
+```
