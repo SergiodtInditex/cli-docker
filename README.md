@@ -78,3 +78,22 @@ docker run -v ${KAFKA_DATA_REPO}:/app/DataStreaming \
            -it cli-image /bin/bash
 ```
 Al abrir una sesión de bash dentro del contenedor (-it cli-image /bin/bash), proporcionas un entorno interactivo para trabajar con la aplicación.
+
+### Interacción Posterior con el Contenedor Activo
+
+Si necesitas volver a interactuar con un contenedor activo, el siguiente comando te brinda acceso a su terminal sin reiniciar el proceso que se ejecuta desde el `entrypoint.sh`:
+
+```bash
+docker exec -it contenedor-cli /bin/bash
+```
+### Detención y Eliminación
+
+Cuando ya no necesites el contenedor, puedes utilizar los siguientes comandos para detener su ejecución y eliminarlo de tu sistema. Esto te ayudará a liberar recursos o a preparar el entorno para configurar un nuevo contenedor desde cero:
+
+```bash
+docker stop contenedor-cli
+docker rm contenedor-cli
+```
+
+
+
