@@ -94,6 +94,15 @@ Cuando ya no necesites el contenedor, puedes utilizar los siguientes comandos pa
 docker stop contenedor-cli
 docker rm contenedor-cli
 ```
+## Comportamiento y Uso Detallado del Contenedor
+
+Al arrancar, el contenedor ejecutará `entrypoint.sh`, realizando comprobaciones iniciales para la existencia de certificados y la compilación de la aplicación. Si estos requisitos previos no se cumplen, el contenedor los instalará y/o ejecutará los procesos de mavenizado necesarios.
+
+Dentro del contenedor, se implementa un bucle que pide al usuario ingresar parámetros de ejecución para la aplicación CLI. Esta interacción continua hasta que el usuario decide salir con `exit cli`.
+
+Si decides salir del bucle, no te preocupes; puedes volver al flujo de trabajo de la aplicación CLI ejecutando el script `ktm-cli.sh` ubicado en `/app/DataStreaming/scripts/` desde la consola del contenedor.
+
+Recuerda, si el contenedor está detenido, deberás iniciar el contenedor con `docker start contenedor-cli` antes de poder interactuar nuevamente con la consola del contenedor y la aplicación CLI.
 
 
 
